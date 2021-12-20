@@ -23,7 +23,7 @@
       
       <guid>http://localhost:1313/post/hello-hugo/</guid>
       <description>Is my first build
-javascript console.log(&amp;quot;hello word&amp;quot;)</description>
+1  console.log(&amp;#34;hello word&amp;#34;)   </description>
     </item>
     
   </channel>
