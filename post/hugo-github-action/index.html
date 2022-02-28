@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.92.2 with theme even" />
+<meta name="generator" content="Hugo 0.93.0 with theme even" />
 
 
 <link rel="canonical" href="http://localhost:1313/post/hugo-github-action/" />
@@ -49,7 +49,7 @@
 <meta itemprop="name" content="Hugo 使用GitHub Actions自动发布">
 <meta itemprop="description" content="整个流程及原理 物料 http://xxx.github.io public 仓库 A 存放个人源码(博客文稿) 的 private 仓库 B 熟悉 Hugo 熟悉 github actions 流程及原理 本地添加文章，提交到 Github 仓库 B push 操作自动触发 Github 仓库 B 预先"><meta itemprop="datePublished" content="2021-12-20T22:49:13+08:00" />
 <meta itemprop="dateModified" content="2021-12-20T22:49:13+08:00" />
-<meta itemprop="wordCount" content="834">
+<meta itemprop="wordCount" content="833">
 <meta itemprop="keywords" content="Github Actions," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Hugo 使用GitHub Actions自动发布"/>
 <meta name="twitter:description" content="整个流程及原理 物料 http://xxx.github.io public 仓库 A 存放个人源码(博客文稿) 的 private 仓库 B 熟悉 Hugo 熟悉 github actions 流程及原理 本地添加文章，提交到 Github 仓库 B push 操作自动触发 Github 仓库 B 预先"/>
@@ -130,7 +130,7 @@
       <div class="post-meta">
         <span class="post-time"> 2021-12-20 </span>
         
-          <span class="more-meta"> 834 words </span>
+          <span class="more-meta"> 833 words </span>
           <span class="more-meta"> 2 mins read </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
       </div>
@@ -203,13 +203,13 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"># 选取一个目录
-# 克隆 source 仓库
-git clone xxx
-
-# 进入仓库
-cd xxx.github.io 
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 选取一个目录
+</span></span><span class="line"><span class="cl"># 克隆 source 仓库
+</span></span><span class="line"><span class="cl">git clone xxx
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 进入仓库
+</span></span><span class="line"><span class="cl">cd xxx.github.io 
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>生成 Hugo 源码并进行配置</p>
 <div class="highlight"><div class="chroma">
@@ -227,18 +227,18 @@ cd xxx.github.io
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"># 在当前目录生成 Hugo 源码
-hugo new site . 
-
-# 为当前博客选取一个主题，你可以不执行这一命令使用默认的主题
-git submodule add https://github.com/halogenica/beautifulhugo.git themes/beautifulhugo 
-
-# 编辑 config.toml 配置文件，使 beautifulhugo 主题生效
-echo &#39;theme = &#34;beautifulhugo&#34;&#39; &gt;&gt; config.tomlecho &#39;theme = &#34;beautifulhugo&#34;&#39; &gt;&gt; config.tom
-
-# 此时你就可以运行预览效果
-hugo serve -D
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 在当前目录生成 Hugo 源码
+</span></span><span class="line"><span class="cl">hugo new site . 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 为当前博客选取一个主题，你可以不执行这一命令使用默认的主题
+</span></span><span class="line"><span class="cl">git submodule add https://github.com/halogenica/beautifulhugo.git themes/beautifulhugo 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 编辑 config.toml 配置文件，使 beautifulhugo 主题生效
+</span></span><span class="line"><span class="cl">echo &#39;theme = &#34;beautifulhugo&#34;&#39; &gt;&gt; config.tomlecho &#39;theme = &#34;beautifulhugo&#34;&#39; &gt;&gt; config.tom
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 此时你就可以运行预览效果
+</span></span><span class="line"><span class="cl">hugo serve -D
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>此时，控制台构建成功,输出可访问地址：</p>
 <p><code>http://localhost:1313/</code></p>
@@ -250,10 +250,10 @@ hugo serve -D
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">git add .
-git commit -m &#34;first commit&#34;
-git push -u origin master
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">git commit -m &#34;first commit&#34;
+</span></span><span class="line"><span class="cl">git push -u origin master
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="配置-github-自动构建发布-actions">配置 Github 自动构建发布 Actions</h2>
 <p>源码仓库Blogs为 <a href="http://xxx.github.io">http://xxx.github.io</a> 仓库配置action。可直接拷贝如下代码：</p>
@@ -292,44 +292,42 @@ git push -u origin master
 </span><span class="lnt">31
 </span><span class="lnt">32
 </span><span class="lnt">33
-</span><span class="lnt">34
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">name: GitHubPages
-
-on:
-  push:
-    branches:
-      - master  # Set a branch to deploy
-
-jobs:
-  deploy:
-    runs-on: ubuntu-18.04
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          submodules: recursive  # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          # hugo-version: &#39;${{ steps.hugo-version.outputs.HUGO_VERSION }}&#39;
-          hugo-version: &#39;0.74.2&#39;
-          # extended: true
-          
-      - name: Build
-        run: hugo --minify
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          external_repository: xxx/xxx.github.io
-          publish_branch: master
-          publish_dir: ./public
-
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">name: GitHubPages
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">on:
+</span></span><span class="line"><span class="cl">  push:
+</span></span><span class="line"><span class="cl">    branches:
+</span></span><span class="line"><span class="cl">      - master  # Set a branch to deploy
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">jobs:
+</span></span><span class="line"><span class="cl">  deploy:
+</span></span><span class="line"><span class="cl">    runs-on: ubuntu-18.04
+</span></span><span class="line"><span class="cl">    steps:
+</span></span><span class="line"><span class="cl">      - uses: actions/checkout@v2
+</span></span><span class="line"><span class="cl">        with:
+</span></span><span class="line"><span class="cl">          submodules: recursive  # Fetch Hugo themes (true OR recursive)
+</span></span><span class="line"><span class="cl">          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      - name: Setup Hugo
+</span></span><span class="line"><span class="cl">        uses: peaceiris/actions-hugo@v2
+</span></span><span class="line"><span class="cl">        with:
+</span></span><span class="line"><span class="cl">          # hugo-version: &#39;${{ steps.hugo-version.outputs.HUGO_VERSION }}&#39;
+</span></span><span class="line"><span class="cl">          hugo-version: &#39;0.74.2&#39;
+</span></span><span class="line"><span class="cl">          # extended: true
+</span></span><span class="line"><span class="cl">          
+</span></span><span class="line"><span class="cl">      - name: Build
+</span></span><span class="line"><span class="cl">        run: hugo --minify
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      - name: Deploy
+</span></span><span class="line"><span class="cl">        uses: peaceiris/actions-gh-pages@v3
+</span></span><span class="line"><span class="cl">        with:
+</span></span><span class="line"><span class="cl">          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+</span></span><span class="line"><span class="cl">          external_repository: xxx/xxx.github.io
+</span></span><span class="line"><span class="cl">          publish_branch: master
+</span></span><span class="line"><span class="cl">          publish_dir: ./public
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>修改远程仓库即可，其他的基本上不用更新。</p>
 <h2 id="验证">验证</h2>
@@ -423,7 +421,7 @@ jobs:
 
 
 
-<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+<script type="text/javascript" src="/js/main.min.64437849d125a2d603b3e71d6de5225d641a32d17168a58106e0b61852079683.js"></script>
 
 
 
